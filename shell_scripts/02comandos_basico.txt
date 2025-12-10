@@ -1,0 +1,74 @@
+                
+               #### COMANDOS BÁSICOS SHELL SCRIPT ####
+
+
+nano NO LINUX:
+
+                    nome: script01
+============================================================
+#!/bin/bash => SCRIPT DE EXECUSAO BASH
+
+echo "Hello Word!" =>   RETORNA A MENSSAGEM NA TELA
+
+chmod +x script01  =>   DAR PERMISSAO DE EXECUSAO
+./script01         =>   MODE DIRETO DE EXECUTAR O SCRIPT NO TERMINAL
+=============================================================
+
+
+
+                    nome: script02
+=============================================================
+#!/bin/bash
+
+echo "Mostrando interfaces de rede" =>  RETORNA A MENSSAGEM NA TELA
+ifconfig  =>    MOSTRA INTERFACES DE REDE
+
+echo "============================"
+echo "Mostrando processos"
+ps aux    =>    MOSTRA PROCESSOS NA REDE
+=============================================================
+
+
+
+                    nome: script03
+=============================================================
+#!/bin/bash
+
+echo "Digite o nome de uma interface de rede: "
+echo "======================================"
+read interface =>   LÊ O COMANDO DIGITADO E JOGA NA VARIAVEL interface
+
+echo "======================================"
+echo "Informaçoes da interface $interface: "
+echo
+ifconfig $interface => EXECUTA O COMANDO DIGITADO NA VARIAVEL E MOSTRA NA TELA
+=============================================================
+
+
+
+
+                    nome: script04
+=============================================================
+#!/bin/bash
+
+#Atualizaçao do sistema linux
+apt update
+apt upgrade
+apt dist-upgrade
+=============================================================
+
+
+
+
+                    nome: script05
+=============================================================
+#!/bin/bash
+
+echo "Digite o nome do pacote: "
+read $pacote => LÊ O COMANDO E JOGA NA VARIAVEL $pacote
+
+echo "==============================="
+echo "Instalando pacote..."
+apt install $pacote -Y ou -S => INSTALA O PACOTE COM PERMISSAO
+apt list -a $pacote => LISTA OS PACOTES INSTALADOS OU NAO INTALADOS
+=============================================================

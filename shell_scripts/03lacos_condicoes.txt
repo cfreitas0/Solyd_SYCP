@@ -1,0 +1,110 @@
+               
+               
+               
+                #### LACOS DE COMPARACAO E CONDICAO ####
+
+
+                        nome: script01.sh
+===========================================================
+#!/bin/bash
+
+echo "Digite r p ver Rotas ou i p ver interfaces de rede:"
+read entrada => LEITURA DA VARIAVEL entrada
+
+if [ $entrada == "r" ]
+then    => ENTAO
+echo "Mostrando rotas: "
+route -e    => COMANDO PARA MOSTRAR ROTAS 
+fi  => FECHAR O IF
+
+if [ $entrada == "i" ]
+then
+echo "Digite o nome de uma interface de rede:"
+read nome
+echo "mostarndo interface $nome: "
+ifconfig $nome
+fi
+=========================================================
+
+
+
+
+                        nome: script02.sh
+=========================================================
+#!/bin/bash
+
+
+echo "Digite r p ver Rotas ou i p ver interfaces de rede:"
+read entrada
+
+if [ $entrada == "r" ]
+then
+echo "Mostrando rotas: "
+route -e
+elif [ $entrada == "i" ]
+then
+echo "Digite o nome de uma interface de rede:"
+read nome
+echo "mostarndo interface $nome: "
+ifconfig $nome
+else
+echo "Valor invalido!"
+fi
+
+
+
+                       nome: script03.sh
+=========================================================
+#!/bin/bash
+
+echo "DIGITE A QUANTIDADE DE HOSTS P/ ORCAMENTO: "
+read quantidade
+
+if (( $quantidade >= 0 && $quantidade <= 30 )); then
+        echo "============================="
+        echo "Valor do Pentest: 30.000 R$"
+        echo "============================="
+elif (( $quantidade > 31 && $quantidade <= 60 )); then
+        echo "============================="
+        echo "Valor do Pentest: 70.000 R$"
+        echo "============================="
+elif (( $quantidade > 61 && $quantidade <= 100 )); then
+        echo "============================="
+        echo "Valor do Pentest: 100.000 R$"
+        echo "============================="
+else
+        echo "======================================"
+        echo "Consultar Valor Costumizado com a EQP"
+        echo "======================================"
+fi
+
+
+
+
+                       nome: script03.sh
+=========================================================
+#!/bin/bash
+
+echo "DIGITE SUA IDADE:"
+read idade
+
+if [ $idade -ge 0 ] && [ $idade -le 10 ]
+then
+echo "==========================="
+echo "Classificado como criança"
+echo "==========================="
+
+elif [ $idade -ge 11 ] && [ $idade -lt 17 ]
+then
+echo "==========================="
+echo "Classificado como adolescente"
+echo "==========================="
+
+elif [ $idade -ge 18 ] && [ $idade -lt 40 ]
+then
+echo "==========================="
+echo "Classificado como adulto"
+echo "==========================="
+
+else
+echo "Classificado como idoso"
