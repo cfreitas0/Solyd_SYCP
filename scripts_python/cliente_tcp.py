@@ -1,3 +1,4 @@
+# cSpell:disable
 import socket
 
 # Boas práticas: Definir constantes para endereço e porta
